@@ -1,11 +1,12 @@
 import "./App.css"
-import Cart from "./components/CartWidget"
 import Navbar from "./components/NavBar"
+import List from "./components/ItemListContainer"
 
 function App() {
 	return (
 		<div>
 			<Navbar />
+			<List items="4" />
 		</div>
 	)
 }
