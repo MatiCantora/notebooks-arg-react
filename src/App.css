@@ -32,6 +32,12 @@
 	margin: 15px;
 }
 
-.navbarCart:hover {
+.cart {
+	border: 0;
+	background-color: #cc0022;
+	color: white;
+}
+
+.cart:hover {
 	color: black;
 }
