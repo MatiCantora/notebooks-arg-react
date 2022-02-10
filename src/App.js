@@ -1,4 +1,5 @@
 import "./App.css"
+import Cart from "./components/CartWidget"
 import Navbar from "./components/NavBar"
 
 function App() {

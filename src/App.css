@@ -3,13 +3,15 @@
 .navbar {
 	display: flex;
 	flex-direction: row;
-	color: #282c34;
-	background-color: red;
+	background-color: #cc0022;
 	height: 50px;
 	align-items: center;
+	color: white;
+	justify-content: space-between;
 }
+
 .navbarLogo {
-	padding-left: 10px;
+	margin: 10px;
 	height: 30px;
 	width: 30px;
 }
@@ -17,6 +19,9 @@
 .navbarButtons {
 	margin: 10px;
 	padding-left: 10px;
+}
+
+.navbarCart {
 }
 
 /* Estilos React Base */
