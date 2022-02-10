@@ -5,7 +5,7 @@ import "../App.css"
 
 const Navbar = () => {
 	return (
-		<div>
+		<>
 			<nav className="navbar">
 				<img className="navbarLogo" src={logo} />
 				<div>
@@ -13,9 +13,11 @@ const Navbar = () => {
 					<a className="navbarButtons">Productos</a>
 					<a className="navbarButtons">Contacto</a>
 				</div>
-				<Cart />
+				<div className="navbarCart">
+					<Cart />
+				</div>
 			</nav>
-		</div>
+		</>
 	)
 }
 

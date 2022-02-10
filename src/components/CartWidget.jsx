@@ -3,7 +3,7 @@ import "../App.css"
 
 const Cart = () => {
 	return (
-		<div className="navbar navbarCart">
+		<div>
 			<i class="fa-solid fa-cart-shopping"></i>
 		</div>
 	)
