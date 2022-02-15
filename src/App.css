@@ -41,3 +41,10 @@
 .cart:hover {
 	color: black;
 }
+
+.count {
+	margin: 0 auto;
+	display: flex;
+	width: 600px;
+	justify-content: center;
+}
