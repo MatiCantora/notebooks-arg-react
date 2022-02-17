@@ -15,7 +15,7 @@ export const ItemCount = ({ initial, stock, onAdd }) => {
 
 	return (
 		<>
-			<div className="card text-center w-50 ">
+			<div className="card text-center w-50">
 				<div className="card-header">
 					<h4>Producto</h4>
 				</div>
