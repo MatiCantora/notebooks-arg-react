@@ -1,14 +1,12 @@
 import "./App.css"
 import Navbar from "./components/NavBar"
-import List from "./components/ItemListContainer"
-import { Item } from "./components/Item"
+import ItemListContainer from "./components/ItemListContainer"
 
 function App() {
 	return (
 		<div>
 			<Navbar />
-			<List items="4" />
-			<Item />
+			<ItemListContainer items="4" />
 		</div>
 	)
 }
