@@ -3,15 +3,21 @@ import React from "react"
 export const ItemDetail = ({ item }) => {
 	return (
 		<>
-			<div>
-				<div className="card">
-					<img src={item.img} alt="Avatar" />
-					<div className="container">
-						<h3 className="mt-2">{item.title}</h3>
-						<p>{item.description}</p>
-						<div className="cardBtn">
-							<button className="btn btn-primary m-1 w-50" /*onClick={handleInfo}*/>+ Info</button>
-							<button className="btn btn-primary m-1 w-50" /*onClick={handleBuy}*/>${item.price}</button>
+			<div className="card mb-3" style={{ width: "500px" }}>
+				<div className="row no-gutters">
+					<div className="col-md-4">
+						<img src={item.pictureUrl} className="card-img" alt="..." />
+					</div>
+					<div className="col-md-8">
+						<div className="card-body">
+							<h5 className="card-title">{item.title}</h5>
+							<p className="card-text">
+								Descripción: <br />
+								{item.longDescription}
+							</p>
+							<p className="card-text">
+								<small className="text-muted">${item.price}</small>
+							</p>
 						</div>
 					</div>
 				</div>

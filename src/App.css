@@ -1,45 +1,20 @@
 /* Estilos React Generales */
-
-.navbar {
-	display: flex;
-	flex-direction: row;
-	background-color: #cc0022;
-	height: 50px;
-	align-content: center;
-	justify-content: space-between;
-}
-
 .navbarLogo {
-	margin: 15px;
-	height: 30px;
-	width: 30px;
-}
-
-.navbarButtons {
-	color: white;
+	padding-bottom: 0.3125rem;
+	margin-right: 0.5rem;
+	font-size: 1.25rem;
 	text-decoration: none;
-	margin: 10px;
-	padding-left: 10px;
-}
-
-.navbarButtons:hover {
-	color: black;
-}
-
-.navbarCart {
-	font-size: 20px;
-	color: white;
-	margin: 15px;
+	white-space: nowrap;
 }
 
 .cart {
 	border: 0;
-	background-color: #cc0022;
-	color: white;
+	background-color: rgb(33, 37, 41);
+	color: rgba(255, 255, 255, 0.55);
 }
 
 .cart:hover {
-	color: black;
+	color: white;
 }
 
 .count {

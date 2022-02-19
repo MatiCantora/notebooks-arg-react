@@ -5,9 +5,10 @@ export const prod = [
 	{
 		id: "1",
 		title: "React 1",
-		description: "Programa con React",
-		price: "150",
-		pictureUrl: "https://picsum.photos/id/7/400/300",
+		longDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing element lorem",
+		shortDescription: "Programa con React",
+		price: "890",
+		pictureUrl: "https://picsum.photos/id/7/150/180",
 	},
 	{
 		id: "2",
@@ -52,14 +53,16 @@ export const Item = ({ id, title, description, price, img }) => {
 	// const handleBuy = () => {}
 
 	return (
-		<div className="card">
-			<img src={img} alt="Avatar" />
-			<div className="container">
-				<h3 className="mt-2">{title}</h3>
-				<p>{description}</p>
-				<div className="cardBtn">
-					<button className="btn btn-primary m-1 w-50" /*onClick={handleInfo}*/>+ Info</button>
-					<button className="btn btn-primary m-1 w-50" /*onClick={handleBuy}*/>${price}</button>
+		<div className="col">
+			<div className="card">
+				<img src={img} alt="Avatar" />
+				<div className="container">
+					<h3 className="mt-2">{title}</h3>
+					<p>{description}</p>
+					<div className="cardBtn">
+						<button className="btn btn-primary m-1 w-50" /*onClick={handleInfo}*/>+ Info</button>
+						<button className="btn btn-primary m-1 w-50" /*onClick={handleBuy}*/>${price}</button>
+					</div>
 				</div>
 			</div>
 		</div>

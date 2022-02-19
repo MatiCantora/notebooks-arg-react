@@ -5,7 +5,7 @@ export const ItemList = () => {
 	const [items, setItems] = useState([])
 
 	useEffect(() => {
-		const promesa = new Promise((resolve, reject) => {
+		const promesa = new Promise((resolve) => {
 			setTimeout(() => {
 				resolve(prod)
 			}, 2000)
@@ -14,7 +14,9 @@ export const ItemList = () => {
 			console.log("resultado", resultado)
 			setItems(resultado)
 		})
-	})
+	}, [setItems])
+
+	console.log(items)
 
 	return (
 		<div className="row">

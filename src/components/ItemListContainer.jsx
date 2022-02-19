@@ -1,7 +1,7 @@
 import { ItemCount } from "./ItemCount"
 import { ItemList } from "./ItemList"
 
-const ItemListContainer = ({ items }) => {
+const ItemListContainer = () => {
 	const handleCount = (cant) => {
 		alert(`Se agregaron ${cant} items`)
 	}
