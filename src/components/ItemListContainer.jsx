@@ -1,3 +1,4 @@
+import React from "react"
 import { ItemCount } from "./ItemCount"
 import { ItemList } from "./ItemList"
 
@@ -8,9 +9,9 @@ const ItemListContainer = () => {
 
 	return (
 		<>
-			<div className="count">
+			{/* <div className="count">
 				<ItemCount initial={1} stock={10} onAdd={handleCount} />
-			</div>
+			</div> */}
 			<div className="container mt-2">
 				<ItemList />
 			</div>

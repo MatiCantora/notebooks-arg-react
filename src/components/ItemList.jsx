@@ -23,7 +23,7 @@ export const ItemList = () => {
 			{items.map((prod) => (
 				<Item
 					title={prod.title}
-					description={prod.description}
+					description={prod.shortDescription}
 					price={prod.price}
 					img={prod.pictureUrl}
 					key={prod.id}

@@ -1,7 +1,9 @@
-import "./App.css"
+import React from "react"
 import Navbar from "./components/NavBar"
-// import ItemListContainer from "./components/ItemListContainer"
-import { ItemDetailContainer } from "./components/ItemDetailContainer"
+import ItemListContainer from "./components/ItemListContainer"
+// import { ItemDetailContainer } from "./components/ItemDetailContainer"
+import Footer from "./components/Footer"
+import "./App.css"
 
 function App() {
 	return (
@@ -9,11 +11,14 @@ function App() {
 			<div>
 				<Navbar />
 			</div>
+			<div>
+				<ItemListContainer />
+			</div>
 			{/* <div>
-				<ItemListContainer /> No se importa por el desafío 7
+				<ItemDetailContainer />
 			</div> */}
 			<div>
-				<ItemDetailContainer />
+				<Footer />
 			</div>
 		</div>
 	)
