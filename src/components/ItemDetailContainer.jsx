@@ -1,29 +1,30 @@
 import React, { useState, useEffect } from "react"
-import { ItemDetail } from "./ItemDetail"
-import { prod } from "./Item"
-
-const getItems = () => {
-	return new Promise((resolve) => {
-		setTimeout(() => {
-			resolve(prod)
-		}, 2000)
-	})
-}
+import { useParams } from "react-router-dom"
+import ItemDetail from "./ItemDetail"
+import { getItems } from "./getItems"
 
 export const ItemDetailContainer = () => {
-	const [item, SetItem] = useState([])
+	const [item, setItem] = useState([])
+
+	const { itemId } = useParams()
 
 	useEffect(() => {
-		getItems().then((resolve) => SetItem(resolve))
-	}, [item])
+		if (itemId === undefined) {
+			getItems().then((resolve) => setItem(resolve))
+		} else {
+			getItems().then((resolve) => setItem(resolve.filter((it) => it.id === itemId)))
+		}
+	}, [itemId])
 
-	const itemFiltrado = item.filter((item) => item.price > 500)
+	console.log(itemId)
 
 	return (
 		<>
-			{itemFiltrado.map((itemDetail) => (
-				<ItemDetail item={itemDetail} key={itemDetail.id} />
-			))}
+			<div className="container mt-2">
+				{item.map((itemDetail) => (
+					<ItemDetail id={itemId} key={itemDetail.id} />
+				))}
+			</div>
 		</>
 	)
 }

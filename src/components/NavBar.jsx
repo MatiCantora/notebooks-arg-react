@@ -1,6 +1,7 @@
 import React from "react"
 import logo from "./img/logoReact.svg"
-import Cart from "./CartWidget"
+import CartWidget from "./CartWidget"
+import { Link } from "react-router-dom"
 import "../App.css"
 
 const Navbar = () => {
@@ -21,31 +22,31 @@ const Navbar = () => {
 					</button>
 
 					<div className="collapse navbar-collapse" id="navbarSupportedContent">
-						<a className="navbarLogo" href="#">
+						<Link className="navbarLogo" to="/">
 							<img src={logo} height="25" alt="MDB Logo" loading="lazy" />
-						</a>
+						</Link>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<a className="nav-link" href="#">
+								<Link className="nav-link" to="/category/inicio">
 									Inicio
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">
+								<Link className="nav-link" to="/category/productos">
 									Productos
-								</a>
+								</Link>
 							</li>
 							<li className="nav-item">
-								<a className="nav-link" href="#">
+								<Link className="nav-link" to="/category/contacto">
 									Contacto
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
 
-					<div>
-						<Cart />
-					</div>
+					<Link to="/Cart">
+						<CartWidget />
+					</Link>
 				</div>
 			</nav>
 		</>

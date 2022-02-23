@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "react-router-dom"
 import "../App.css"
 
 export const prod = [
@@ -9,6 +10,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "890",
 		pictureUrl: "https://picsum.photos/id/7/400/300",
+		stock: "3",
 	},
 	{
 		id: "2",
@@ -17,6 +19,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "180",
 		pictureUrl: "https://picsum.photos/id/8/400/300",
+		stock: "9",
 	},
 	{
 		id: "3",
@@ -25,6 +28,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "130",
 		pictureUrl: "https://picsum.photos/id/10/400/300",
+		stock: "4",
 	},
 	{
 		id: "4",
@@ -33,6 +37,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "200",
 		pictureUrl: "https://picsum.photos/id/11/400/300",
+		stock: "11",
 	},
 	{
 		id: "5",
@@ -41,6 +46,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "120",
 		pictureUrl: "https://picsum.photos/id/12/400/300",
+		stock: "6",
 	},
 	{
 		id: "6",
@@ -49,6 +55,7 @@ export const prod = [
 		shortDescription: "Programa con React",
 		price: "170",
 		pictureUrl: "https://picsum.photos/id/13/400/300",
+		stock: "2",
 	},
 ]
 
@@ -65,7 +72,9 @@ export const Item = ({ id, title, description, price, img }) => {
 					<h3 className="mt-2">{title}</h3>
 					<p>{description}</p>
 					<div className="cardBtn">
-						<button className="btn btn-primary m-1 w-50" /*onClick={handleInfo}*/>+ Info</button>
+						<Link to={`/item/${id}`} className="btn btn-primary m-1 w-50">
+							Ver mas
+						</Link>
 						<button className="btn btn-primary m-1 w-50" /*onClick={handleBuy}*/>${price}</button>
 					</div>
 				</div>

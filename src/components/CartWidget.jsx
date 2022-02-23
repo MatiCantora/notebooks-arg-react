@@ -6,7 +6,7 @@ function click(e) {
 	console.log("Compraste")
 }
 
-const Cart = () => {
+const CartWidget = () => {
 	return (
 		<button className="cart" onClick={click}>
 			<i className="fa-solid fa-cart-shopping"></i>
@@ -14,4 +14,4 @@ const Cart = () => {
 	)
 }
 
-export default Cart
+export default CartWidget

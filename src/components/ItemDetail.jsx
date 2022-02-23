@@ -1,6 +1,22 @@
 import React from "react"
+import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { getItems } from "./getItems"
 
-export const ItemDetail = ({ item }) => {
+const ItemDetail = () => {
+	const [item, setItem] = useState({})
+	const { itemId } = useParams()
+
+	useEffect(() => {
+		if (itemId === undefined) {
+			getItems().then((resolve) => setItem(resolve))
+		} else {
+			getItems().then((resolve) => setItem(resolve[itemId]))
+		}
+	}, [itemId])
+
+	console.log("Item Detail", item)
+
 	return (
 		<>
 			<div className="card mb-3" style={{ width: "500px" }}>
@@ -25,3 +41,5 @@ export const ItemDetail = ({ item }) => {
 		</>
 	)
 }
+
+export default ItemDetail
