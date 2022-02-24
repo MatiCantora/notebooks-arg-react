@@ -31,11 +31,16 @@ const Navbar = () => {
 									Inicio
 								</Link>
 							</li>
-							<li className="nav-item">
-								<Link className="nav-link" to="/category/productos">
+							<div class="dropdown">
+								<Link to="/category/productos" className="dropbtn">
 									Productos
 								</Link>
-							</li>
+								<div className="dropdown-content">
+									<Link to="/category/notebook">Notebooks</Link>
+									<Link to="/category/mouse">Mouses</Link>
+									<Link to="/category/teclado">Teclados</Link>
+								</div>
+							</div>
 							<li className="nav-item">
 								<Link className="nav-link" to="/contacto">
 									Contacto

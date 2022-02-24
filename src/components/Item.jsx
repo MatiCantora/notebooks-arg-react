@@ -12,7 +12,7 @@ export const prod = [
 		price: "59.999",
 		pictureUrl: "https://images.fravega.com/f300/7141332cdd86534ef6a13aa13aba53ca.jpg.webp",
 		stock: "3",
-		category: "productos",
+		category: "notebook",
 	},
 	{
 		id: "1",
@@ -23,7 +23,7 @@ export const prod = [
 		price: "89.999",
 		pictureUrl: "https://images.fravega.com/f300/335e37d87cddeeadd5c3af663bdb0b4b.jpg.webp",
 		stock: "9",
-		category: "productos",
+		category: "notebook",
 	},
 	{
 		id: "2",
@@ -34,7 +34,7 @@ export const prod = [
 		price: "76.999",
 		pictureUrl: "https://images.fravega.com/f300/e7864a8ff8e50798e3817460ca1070c9.jpg.webp",
 		stock: "4",
-		category: "productos",
+		category: "notebook",
 	},
 	{
 		id: "3",
@@ -45,7 +45,7 @@ export const prod = [
 		price: "62.999",
 		pictureUrl: "https://images.fravega.com/f300/102f47e7fa3a987e31f765eb082b948e.jpg.webp",
 		stock: "11",
-		category: "productos",
+		category: "notebook",
 	},
 	{
 		id: "4",
@@ -56,7 +56,7 @@ export const prod = [
 		price: "112.999",
 		pictureUrl: "https://images.fravega.com/f300/b83f2ecfa919e5359892916e2eb72638.jpg.webp",
 		stock: "6",
-		category: "productos",
+		category: "notebook",
 	},
 	{
 		id: "5",
@@ -67,29 +67,63 @@ export const prod = [
 		price: "55.999",
 		pictureUrl: "https://images.fravega.com/f300/0abbdf9a9bf8034af97a43d39a2d30d5.jpg.webp",
 		stock: "2",
-		category: "productos",
+		category: "notebook",
+	},
+	{
+		id: "6",
+		title: "Mouse Gamer Havit",
+		longDescription:
+			"Mouse Gamer con luces, retroiluminado, 7 botones, resolucion regulable entre 1000 y 3200DPI, ergonomico.",
+		shortDescription: "Mouse gamer con RGB",
+		price: "1.499",
+		pictureUrl: "https://images.fravega.com/f300/583e1655b250a000c28e5320bfb9a1fa.jpg.webp",
+		stock: "11",
+		category: "mouse",
+	},
+	{
+		id: "7",
+		title: "Teclado simil-mecanico Nisuta",
+		longDescription:
+			"Teclado gaming retroiluminado de 104 teclas - 8 modos de colores fijos - 9 modos de retroiluminación - Incluye 6 zonas de Iluminación personalizables - Incluye modo de activación de iluminación por sonido - Permite cambiar la velocidad y brillo de cada modo de iluminación - 19 teclas antighosting - Cable USB de 1.5M - Incluye teclado con diseño de teclas en español - 12 Teclas Multimedia - Permite intercambiar teclas W, A, S, D con las teclas de dirección - Función de bloqueo de tecla de Windows - Soporta ME/XP/2000/Vista/7/8/10/Mac - Apto para uso en consolas de juegos (en juegos que soporten teclado)",
+		shortDescription: "USB con leds RGB",
+		price: "3.753",
+		pictureUrl: "https://images.fravega.com/f300/36a3f16c45030120d1767dde3673d04f.jpg.webp",
+		stock: "6",
+		category: "teclado",
+	},
+	{
+		id: "8",
+		title: "Teclado Gamer Havit",
+		longDescription: "Teclado ultra fino gamer con retroiluminacion con cable",
+		shortDescription: "Semi mecanico Ultra Slim",
+		price: "1.599",
+		pictureUrl: "https://images.fravega.com/f300/50117fd2a5692bbfc627bf06f16524fe.jpg.webp",
+		stock: "3",
+		category: "teclado",
 	},
 ]
 
 export const Item = ({ id, title, description, price, img }) => {
 	return (
-		<div className="col">
-			<div className="card">
-				<img src={img} alt="Avatar" />
-				<div className="container">
-					<h3 className="mt-2">{title}</h3>
-					<h6 className="m-1 text-muted">{description}</h6>
+		<>
+			<div className="col">
+				<div className="card">
+					<img src={img} alt="Avatar" />
+					<div className="container">
+						<h3 className="mt-2">{title}</h3>
+						<h6 className="m-1 text-muted">{description}</h6>
 
-					<div className="cardBtn">
-						<p className="btn btn-success m-1 w-50" to="/Cart">
-							${price}
-						</p>
-						<Link to={`/item/${id}`} className="btn btn-primary m-1 w-75">
-							Ver mas
-						</Link>
+						<div className="cardBtn">
+							<p className="btn btn-success m-1 w-50" to="/Cart">
+								${price}
+							</p>
+							<Link to={`/item/${id}`} className="btn btn-primary m-1 w-75">
+								Ver mas
+							</Link>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	)
 }
