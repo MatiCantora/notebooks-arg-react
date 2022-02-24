@@ -75,7 +75,9 @@ export const Item = ({ id, title, description, price, img }) => {
 						<Link to={`/item/${id}`} className="btn btn-primary m-1 w-50">
 							Ver mas
 						</Link>
-						<button className="btn btn-primary m-1 w-50" /*onClick={handleBuy}*/>${price}</button>
+						<Link className="btn btn-primary m-1 w-50" to="/Cart">
+							${price}
+						</Link>
 					</div>
 				</div>
 			</div>

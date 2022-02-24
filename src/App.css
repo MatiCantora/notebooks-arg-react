@@ -1,4 +1,8 @@
 /* Estilos React Generales */
+
+* {
+	font-family: "Poppins", sans-serif;
+}
 .navbarLogo {
 	padding-bottom: 0.3125rem;
 	margin-right: 0.5rem;
