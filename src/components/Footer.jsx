@@ -3,7 +3,7 @@ import React from "react"
 const Footer = () => {
 	return (
 		<>
-			<footer className="bg-dark text-center text-white mt-3">
+			<footer className="bg-dark text-center text-white mt-3 footer">
 				<div className="container p-1">
 					<section>
 						<a className="btn btn-outline-light btn-floating m-1" href="#!" role="button">

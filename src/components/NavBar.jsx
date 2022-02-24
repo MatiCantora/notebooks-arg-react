@@ -27,7 +27,7 @@ const Navbar = () => {
 						</Link>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<Link className="nav-link" to="/category/inicio">
+								<Link className="nav-link" to="/inicio">
 									Inicio
 								</Link>
 							</li>
@@ -37,7 +37,7 @@ const Navbar = () => {
 								</Link>
 							</li>
 							<li className="nav-item">
-								<Link className="nav-link" to="/category/contacto">
+								<Link className="nav-link" to="/contacto">
 									Contacto
 								</Link>
 							</li>

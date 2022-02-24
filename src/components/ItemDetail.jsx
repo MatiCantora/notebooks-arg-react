@@ -15,24 +15,19 @@ const ItemDetail = () => {
 		}
 	}, [itemId])
 
-	console.log("Item Detail", item)
-
 	return (
 		<>
-			<div className="card mb-3" style={{ width: "500px" }}>
-				<div className="row no-gutters">
+			<div className="cardDetail mb-3">
+				<div className="row no-gutters detailCenter">
 					<div className="col-md-4">
-						<img src={item.pictureUrl} className="card-img" alt="..." />
+						<img src={item.pictureUrl} className="card-img m-3" alt="..." />
 					</div>
-					<div className="col-md-8">
+					<div className="col-md-8 mt-5 m-1">
 						<div className="card-body">
-							<h5 className="card-title">{item.title}</h5>
-							<p className="card-text">
-								Descripción: <br />
-								{item.longDescription}
-							</p>
-							<p className="card-text">
-								<small className="text-muted">${item.price}</small>
+							<h1 className="card-title detailCenter">{item.title}</h1>
+							<p className="card-text text-muted mt-4">{item.longDescription}</p>
+							<p className="card-text detailCenter">
+								<span className="btn btn-success w-25 mt-3">${item.price}</span>
 							</p>
 						</div>
 					</div>

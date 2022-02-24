@@ -1,0 +1,14 @@
+* {
+	font-family: "Poppins", sans-serif;
+}
+
+.inicio {
+	font-size: 3rem;
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.inicioBody {
+	height: 77vh;
+}

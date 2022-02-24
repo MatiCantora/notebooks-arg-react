@@ -40,6 +40,12 @@
 	transition: 0.3s;
 }
 
+.card .container h3 {
+	margin-left: 8px;
+	height: 4rem;
+	font-size: 1.8rem;
+}
+
 .card:hover {
 	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
@@ -48,4 +54,17 @@
 	display: flex;
 	flex-direction: row;
 	margin-bottom: 10px;
+	justify-content: center;
+}
+
+.cardDetail {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.detailCenter {
+	display: flex;
+	justify-content: center;
 }

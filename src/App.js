@@ -1,11 +1,11 @@
 import React from "react"
 import Navbar from "./components/NavBar"
 import ItemListContainer from "./components/ItemListContainer"
-import { ItemDetailContainer } from "./components/ItemDetailContainer"
 import ItemDetail from "./components/ItemDetail"
+import Contacto from "./components/Contacto/Contacto"
+import Inicio from "./components/Inicio/Inicio"
 import Footer from "./components/Footer"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-// import Cart from "./components/Cart"
 import "./App.css"
 
 function App() {
@@ -14,9 +14,10 @@ function App() {
 			<Navbar />
 			<Routes>
 				<Route path="/" element={<ItemListContainer />} />
+				<Route path="/contacto" element={<Contacto />} />
+				<Route path="/inicio" element={<Inicio />} />
 				<Route path="/category/:categoryId" element={<ItemListContainer />} />
 				<Route path="/item/:itemId" element={<ItemDetail />} />
-				{/* <Route path="/Cart" element={<Cart />} /> */}
 			</Routes>
 			<Footer />
 		</BrowserRouter>
