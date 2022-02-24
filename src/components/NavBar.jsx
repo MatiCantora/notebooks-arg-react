@@ -27,20 +27,20 @@ const Navbar = () => {
 						</Link>
 						<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 							<li className="nav-item">
-								<Link className="nav-link" to="/inicio">
-									Inicio
+								<Link className="nav-link" to="/category/notebook">
+									Notebooks
 								</Link>
 							</li>
-							<div class="dropdown">
-								<Link to="/category/productos" className="dropbtn">
-									Productos
+							<li className="nav-item">
+								<Link className="nav-link" to="/category/mouse">
+									Mouses
 								</Link>
-								<div className="dropdown-content">
-									<Link to="/category/notebook">Notebooks</Link>
-									<Link to="/category/mouse">Mouses</Link>
-									<Link to="/category/teclado">Teclados</Link>
-								</div>
-							</div>
+							</li>
+							<li className="nav-item">
+								<Link className="nav-link" to="/category/teclado">
+									Teclados
+								</Link>
+							</li>
 							<li className="nav-item">
 								<Link className="nav-link" to="/contacto">
 									Contacto

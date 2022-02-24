@@ -13,11 +13,11 @@ function App() {
 		<BrowserRouter>
 			<Navbar />
 			<Routes>
-				<Route path="/" element={<ItemListContainer />} />
-				<Route path="/contacto" element={<Contacto />} />
-				<Route path="/inicio" element={<Inicio />} />
-				<Route path="/category/:categoryId" element={<ItemListContainer />} />
-				<Route path="/item/:itemId" element={<ItemDetail />} />
+				<Route exact path="/" element={<ItemListContainer />} />
+				<Route exact path="/contacto" element={<Contacto />} />
+				<Route exact path="/inicio" element={<Inicio />} />
+				<Route exact path="/category/:categoryId" element={<ItemListContainer />} />
+				<Route exact path="/item/:itemId" element={<ItemDetail />} />
 			</Routes>
 			<Footer />
 		</BrowserRouter>

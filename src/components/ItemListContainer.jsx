@@ -1,11 +1,11 @@
 import React from "react"
-import { ItemCount } from "./ItemCount"
+// import { ItemCount } from "./ItemCount"
 import ItemList from "./ItemList"
 
 const ItemListContainer = () => {
-	const handleCount = (cant) => {
-		alert(`Se agregaron ${cant} items`)
-	}
+	// const handleCount = (cant) => {
+	// 	alert(`Se agregaron ${cant} items`)
+	// }
 
 	return (
 		<>
