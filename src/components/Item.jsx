@@ -117,7 +117,7 @@ export const Item = ({ id, title, description, price, img }) => {
 							<p className="btn btn-success m-1 w-50" to="/Cart">
 								${price}
 							</p>
-							<Link to={`/item/${id}`} className="btn btn-primary m-1 w-75">
+							<Link to={`/item/${id}`} className="btn bg-dark text-white m-1 w-75">
 								Ver mas
 							</Link>
 						</div>

@@ -79,3 +79,45 @@
 	overflow-x: none;
 	overflow-y: auto;
 }
+
+.quantity {
+	display: flex;
+	width: 10rem;
+}
+
+.quantity label {
+	border: 1px solid #000;
+	height: 45px;
+	width: 5rem;
+	text-align: center;
+}
+
+.quantity button {
+	border: 1px solid #000;
+	height: 45px;
+	width: 3rem;
+}
+
+.textoCant {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2rem;
+}
+
+.itemCount {
+	display: flex;
+	justify-content: center;
+}
+
+.btn-carrito {
+	font-size: 0.8rem;
+	height: 45px;
+	width: 10rem;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
