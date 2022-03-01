@@ -15,6 +15,7 @@ const ItemDetail = () => {
 			getItems().then((resolve) => setItem(resolve[itemId]))
 		}
 	}, [itemId])
+	// getItems(itemId).then((resolve) => setItem(resolve))},[itemId])
 
 	const [count, setCount] = useState(0)
 
