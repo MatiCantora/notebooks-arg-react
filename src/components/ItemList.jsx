@@ -3,21 +3,21 @@ import { Item } from "./Item"
 import { useParams } from "react-router-dom"
 import { getItems } from "./getItems"
 
-const ItemList = () => {
-	const [item, setItem] = useState([])
+export const ItemList = () => {
+	const [products, setProducts] = useState([])
 	const { categoryId } = useParams()
 
 	useEffect(() => {
 		if (categoryId === undefined) {
-			getItems().then((resolve) => setItem(resolve))
+			getItems().then((resp) => setProducts(resp))
 		} else {
-			getItems().then((resolve) => setItem(resolve.filter((it) => it.category === categoryId)))
+			getItems().then((resp) => setProducts(resp.filter((it) => it.category === categoryId)))
 		}
 	}, [categoryId])
 
 	return (
 		<div className="row">
-			{item.map((prod) => (
+			{products.map((prod) => (
 				<Item
 					title={prod.title}
 					description={prod.shortDescription}
