@@ -1,16 +1,40 @@
 import React from "react"
 import "../App.css"
+import { useState } from "react"
+import { Link } from "react-router-dom"
+import { useCartContext } from "../context/CartContext/CartContext"
 
-function click(e) {
-	e.preventDefault()
-	console.log("Compraste")
-}
+export const CartWidget = () => {
+	const [cartClick, setCartClick] = useState(false)
 
-const CartWidget = () => {
+	const { cart } = useCartContext()
+	let itemsCartWidg = 0
+
+	for (let i = 0; i < cart.length; i++) {
+		const cant = cart[i].quantity
+
+		itemsCartWidg = itemsCartWidg + cant
+	}
+
 	return (
-		<button className="cart" onClick={click}>
-			<i className="fa-solid fa-cart-shopping"></i>
-		</button>
+		<>
+			<div className="cartWidget" onClick={(e) => setCartClick(!cartClick)}>
+				<span className="cartCant">{itemsCartWidg}</span>
+				<i className="fas fa-shopping-cart cart-style">
+					<p></p>
+				</i>
+
+				{cartClick ? (
+					<div className="card-click">
+						<Link to="/cart" className="btn bg-principal text-white">
+							Ver Carrito
+						</Link>
+					</div>
+				) : (
+					<></>
+				)}
+			</div>
+		</>
 	)
 }
 

@@ -73,7 +73,6 @@
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	/* justify-content: center;  */
 	align-items: center;
 	height: 80vh;
 	overflow-x: none;
@@ -131,4 +130,43 @@
 }
 .cartButton:hover {
 	color: white;
+}
+
+.cart-style {
+	color: rgba(255, 255, 255, 0.55);
+	font-size: 1.2rem;
+}
+.cart-style:hover {
+	color: white;
+}
+.cartCant {
+	color: rgba(255, 255, 255, 0.55);
+	font-size: 1rem;
+	font-weight: bold;
+	padding-right: 0.5rem;
+}
+
+.cartCant:hover {
+	color: white;
+}
+.cartWidget {
+	position: relative;
+}
+.cartWidget:hover {
+	cursor: pointer;
+	color: white;
+}
+.card-click {
+	position: absolute;
+	z-index: 9;
+	right: 0;
+	width: 102px;
+}
+
+.cardCarrito {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
 }

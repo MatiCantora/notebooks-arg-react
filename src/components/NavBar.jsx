@@ -3,8 +3,14 @@ import logo from "./img/logoReact.svg"
 import CartWidget from "./CartWidget"
 import { Link } from "react-router-dom"
 import "../App.css"
+import { useCartContext } from "../context/CartContext/CartContext"
 
 const Navbar = () => {
+	const { cart } = useCartContext()
+	console.log(cart)
+
+	cart.map((item) => console.log(item.quantity))
+
 	return (
 		<>
 			<nav className="navbar navbar-dark bg-dark navbar-expand-lg">
@@ -49,9 +55,12 @@ const Navbar = () => {
 						</ul>
 					</div>
 
-					<Link to="/Cart">
+					{cart.length === 0 ? (
+						<></>
+					) : (
+						// <Link to="/cart" className="cartWidget"><CartWidget/></Link>
 						<CartWidget />
-					</Link>
+					)}
 				</div>
 			</nav>
 		</>
