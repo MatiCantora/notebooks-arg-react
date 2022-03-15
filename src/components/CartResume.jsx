@@ -1,9 +1,7 @@
 export const CartResume = ({ prod }) => {
-	console.log(prod)
-
 	return (
 		<>
-			<div className="text-center">
+			<div className="text-end">
 				<h4>$ {prod.price * prod.quantity}</h4>
 				<hr />
 			</div>

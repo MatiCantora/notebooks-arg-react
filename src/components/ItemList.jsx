@@ -1,34 +1,21 @@
-import React, { useEffect, useState } from "react"
+import React from "react"
 import { Item } from "./Item"
-import { useParams } from "react-router-dom"
-import { getItems } from "./getItems"
 
-export const ItemList = () => {
-	const [products, setProducts] = useState([])
-	const { categoryId } = useParams()
-
-	useEffect(() => {
-		if (categoryId === undefined) {
-			getItems().then((resp) => setProducts(resp))
-		} else {
-			getItems().then((resp) => setProducts(resp.filter((it) => it.category === categoryId)))
-		}
-	}, [categoryId])
-
+export const ItemList = ({ products }) => {
 	return (
-		<div className="row">
-			{products.map((prod) => (
-				<Item
-					title={prod.title}
-					description={prod.shortDescription}
-					price={prod.price}
-					img={prod.pictureUrl}
-					key={prod.id}
-					id={prod.id}
-				/>
-			))}
-		</div>
+		<>
+			<div className="row">
+				{products.map((product) => (
+					<Item
+						id={product.id}
+						title={product.title}
+						price={product.price}
+						brand={product.brand}
+						img={product.picUrl}
+						key={product.id}
+					/>
+				))}
+			</div>
+		</>
 	)
 }
-
-export default ItemList
