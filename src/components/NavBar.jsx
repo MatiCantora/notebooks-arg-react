@@ -58,8 +58,9 @@ const Navbar = () => {
 					{cart.length === 0 ? (
 						<></>
 					) : (
-						// <Link to="/cart" className="cartWidget"><CartWidget/></Link>
-						<CartWidget />
+						<Link to="/cart" className="cartWidget">
+							<CartWidget />
+						</Link>
 					)}
 				</div>
 			</nav>

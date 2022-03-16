@@ -146,11 +146,9 @@
 	padding-right: 0.5rem;
 }
 
-.cartCant:hover {
-	color: white;
-}
 .cartWidget {
 	position: relative;
+	text-decoration: none;
 }
 .cartWidget:hover {
 	cursor: pointer;

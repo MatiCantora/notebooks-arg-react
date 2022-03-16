@@ -18,17 +18,15 @@ export const CartWidget = () => {
 
 	return (
 		<>
-			<div className="cartWidget" onClick={(e) => setCartClick(!cartClick)}>
-				<span className="cartCant">{itemsCartWidg}</span>
-				<i className="fas fa-shopping-cart cart-style">
-					<p></p>
-				</i>
+			<div onClick={(e) => setCartClick(!cartClick)}>
+				<Link to="/cart" className="cartWidget">
+					<span className="cartCant">{itemsCartWidg}</span>
+					<i className="fas fa-shopping-cart cart-style"></i>
+				</Link>
 
 				{cartClick ? (
 					<div className="card-click">
-						<Link to="/cart" className="btn bg-principal text-white">
-							Ver Carrito
-						</Link>
+						<Link to="/cart" className="btn bg-principal text-white"></Link>
 					</div>
 				) : (
 					<></>
