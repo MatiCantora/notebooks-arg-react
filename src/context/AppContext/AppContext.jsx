@@ -1,4 +1,3 @@
-import { prod } from "../../components/Item"
 import React, { createContext, useContext, useState, useEffect } from "react"
 import { getItems } from "../../services/firebase"
 

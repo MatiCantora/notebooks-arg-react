@@ -12,7 +12,10 @@ export const ItemDetailContainer = () => {
 	const { id } = useParams()
 
 	useEffect(() => {
-		getItem(id).then((item) => setProductClicked({ ...item.data(), id: item.id }))
+		getItem(id)
+			.then((item) => setProductClicked({ ...item.data(), id: item.id }))
+			.then(() => console.log(productClicked))
+		// setProductClicked({ ...item.data(), id: item.id }))
 	}, [id, products])
 
 	// Funcion onAdd
