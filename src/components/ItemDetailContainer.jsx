@@ -15,10 +15,8 @@ export const ItemDetailContainer = () => {
 		getItem(id)
 			.then((item) => setProductClicked({ ...item.data(), id: item.id }))
 			.then(() => console.log(productClicked))
-		// setProductClicked({ ...item.data(), id: item.id }))
 	}, [id, products])
 
-	// Funcion onAdd
 	const [terminar, setTerminar] = useState(false)
 	const onAdd = () => {
 		setTerminar(true)
