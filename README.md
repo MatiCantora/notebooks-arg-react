@@ -23,3 +23,8 @@
   - Para íconos necesarios a lo largo del sitio.
 - ### Google Fonts - Poppins
   - Para estilo de tipografía
+- ### SweetAlert
+    - Utilizada para crear alerts con estilo amigable y mostrar tanto errores como procedimientos terminados.
+
+
+![](https://github.com/MatiCantora/notebooks-arg-react/blob/main/Notebooks-Arg.gif)
