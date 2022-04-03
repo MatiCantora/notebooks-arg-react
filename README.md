@@ -25,3 +25,6 @@
   - Para estilo de tipografía
 - ### SweetAlert
     - Utilizada para crear alerts con estilo amigable y mostrar tanto errores como procedimientos terminados.
+
+
+![GIF muestra](https://ibb.co/Kxcn1yL)
