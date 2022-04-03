@@ -3,9 +3,6 @@ import { ItemCount } from "./ItemCount"
 import { Link } from "react-router-dom"
 
 export const ItemDetail = ({ product, terminar, onAdd }) => {
-	// console.log(terminar)
-	// console.log(onAdd)
-
 	return (
 		<>
 			<div className="cardDetail mb-3 container">
@@ -16,7 +13,7 @@ export const ItemDetail = ({ product, terminar, onAdd }) => {
 					<div className="col-md-8 mt-5">
 						<div className="card-body">
 							<h1 className="card-title detailCenter">{product.title}</h1>
-							<p className="card-text text-muted mt-4">{product.description}</p>
+							<p className="card-text text-muted mt-4 text-description">{product.description}</p>
 							<p className="card-text detailCenter">
 								<span id="show" className="btn btn-success w-25 mt-3">
 									${product.price}
